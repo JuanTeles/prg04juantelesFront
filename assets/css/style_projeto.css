@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9; 
@@ -8,66 +12,83 @@ body {
 }
 
 header {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    margin-top: -2%;
-    padding: 15px 5px; 
+    padding: 2vh 2vw;
 }
 
-.link-pages a {
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    width: 100%;
+    flex-wrap: wrap;
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0; 
+    margin: 0%;
+    display: flex;      
+    justify-content: center;
+}
+
+nav#menu li {
+    padding: 1%;
+}
+
+nav#menu a {
     color: #333333; 
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px; 
-    margin: 0 5px; 
-    border-radius: 5px;
-    position: relative; 
-    transition: color 0.3s ease;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: background-color 1s ease, color 1s ease;
 }
 
-.link-pages a:hover {
+nav#menu a.active, nav#menu a:hover {
     color: rgb(42, 104, 177); 
+    background-color: rgb(255, 165, 0);
 }
 
 main {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     margin: 0;
     text-align: center;
 }
 
 .container {
-    max-width: 600px;
+    width: min(90%, 600px);
     background-color: #ffffff; 
-    padding: 50px;
+    padding: 8% 6%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2%;
 }
 
 main h1 {
     color: rgb(42, 104, 177); 
-    font-size: 3.5em;
+    font-size: clamp(2.5em, 8vw, 3.5em);
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .slogan {
-    font-size: 1.2em;
+    font-size: clamp(1em, 4vw, 1.2em);
     color: #777;
     margin-bottom: 30px;
 }
 
 main p {
     line-height: 1.6;
-    font-size: 1.1em;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin-bottom: -5%;
 }
 
 
 .link-btn {
-    display: inline-block;
+    display: block;
     margin-top: 30px;
     background-color: rgb(255, 165, 0);
     color: #ffffff;
@@ -75,7 +96,7 @@ main p {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     transition: background-color 0.3s ease;
 }
 
@@ -88,5 +109,5 @@ footer {
     color: #f4f4f9;
     padding: 20px 0;
     text-align: center;
-    font-size: 0.9em;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
 }

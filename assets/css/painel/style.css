@@ -2,7 +2,7 @@ table {
     width: 100%;
     border-collapse: collapse; 
     margin-top: 25px;
-    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    font-size: 0.8rem;
 }
 
 thead {
@@ -43,7 +43,7 @@ tbody tr:hover {
 }
 
 .container-painel {
-    width: min(90%, 1000px);
+    width: min(95%, 1000px);
     background-color: #ffffff; 
     padding: 8% 6%;
     border-radius: 10px;
@@ -55,4 +55,10 @@ tbody tr:hover {
     width: 100%; 
     overflow-x: auto; 
     -webkit-overflow-scrolling: touch; 
+}
+
+@media (min-width: 768px){
+    main h1 {
+        font-size: 3rem;
+    }
 }

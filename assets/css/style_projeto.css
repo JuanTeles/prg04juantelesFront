@@ -35,34 +35,33 @@ main {
 
 main h1 {
     color: rgb(42, 104, 177); 
-    font-size: clamp(2.5em, 8vw, 3.5em);
+    font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .slogan {
-    font-size: clamp(1em, 4vw, 1.2em);
+    font-size: 1rem;
     color: #777;
     margin-bottom: 30px;
 }
 
 main p {
     line-height: 1.6;
-    font-size: clamp(1rem, 2vw, 1.1rem);
-    margin-bottom: -5%;
+    font-size: 0.8rem;
 }
 
 
 .link-btn {
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: rgb(255, 165, 0);
     color: #ffffff;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: 0.85rem;
     transition: background-color 0.3s ease;
 }
 
@@ -75,5 +74,59 @@ footer {
     color: #f4f4f9;
     padding: 20px 0;
     text-align: center;
-    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px){
+    main h1{
+        font-size: 3.5rem;
+    }
+
+    .slogan{
+        font-size: 1.4rem;
+    }
+
+    main p {
+        font-size: 1.15rem;
+    }
+
+    .link-btn {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 992px){
+    main h1{
+        font-size: 4.1rem;
+    }
+
+    .slogan{
+        font-size: 1.35rem;
+    }
+
+    .container {
+        margin-top: 2%;
+        margin-bottom: 5%;
+        width: 50%;
+    }
+
+    main p {
+        font-size: 1.15rem;
+    }
+
+    .btns {
+        margin-bottom: -5%;
+    }
+
+    .link-btn {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
